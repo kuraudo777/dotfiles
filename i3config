@@ -187,10 +187,10 @@ new_window pixel 1
 hide_edge_borders both
 
 exec redshift &
-exec sh ~/.fehbg &
+exec sh ~/.fehbg & --no-startup-id
 #exec compton --config ./.compton/compton.conf
 
 #i3 gaps
-#gaps inner 10
-#gaps outer 5
+gaps inner 20
+gaps outer 20
 
