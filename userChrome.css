@@ -1,0 +1,95 @@
+@namespace html url(http://www.w3.org/1999/xhtml);
+@namespace xul url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+/*
+    Author: Twily
+    Description: Minimal flat styled tabs for Australis
+    Compatibility: -- Firefox 43.0.4 --
+    Website: http://twily.info/
+    Useful search tags within this css:
+    "url-bar visible", "bottom margin", "attach url-bar", "newtab button", "back/forward", "enable scrollbar"
+    To enable bitmap fonts in Firefox 44+; open "about:config" and set the following preference to "false":
+    "gfx.font_rendering.fontconfig.fontlist.enabled"
+*/
+
+
+:root {
+    /* TAB VARIABLES */
+    --bg-light: #17181A; --bg-dark: #27282B;
+    --fg-light: #CECFD1; --fg-dark: #AAABAD;
+    --tab-triangle-correction: -1px;
+    --tab-height: 24px; --tab-icon-size: 16px; --tab-strip-margin: -12px; --tab-overlap: -5px;
+    --tab-fonts: "Droid Sans","Source Sans Pro","Lemon",monospace,"Dejavu Sans"; --tab-font-size: 10pt;
+    --tab-text-align: left; /* left | center | right */
+    --tab-triangle: block;  /* block | none */
+
+    /* URL VARIABLES */
+    --url-background: var(--bg-light); --url-color: var(--fg-dark);
+    --url-height: 24px; --url-right-margin: 6px;
+    --url-fonts: "Droid Sans", "Source Sans Pro", "Lemon",monospace,"Dejavu Sans"; --url-font-size: 10pt;
+    --url-text-align: center; /* left | center | right */
+    --url-position: absolute; /* absolute == top (under tabs) || fixed == bottom of browser */
+}
+
+
+@-moz-document url(chrome://browser/content/browser.xul) {
+    
+    /* TABS */
+    .tabbrowser-tab[fadein]:not([pinned]) { min-width: 100px !important; max-width: /*180px*/ 100% !important; }
+    tab {
+        font-family: var(--tab-fonts) !important;
+        height: var(--tab-height) !important; min-height: var(--tab-height) !important;
+        background: var(--bg-dark) !important; color: var(--fg-dark) !important;
+        font-size: var(--tab-font-size); text-shadow: none !important; text-align: var(--tab-text-align) !important;
+    }
+    
+/*
+ *  Urlbar
+ */
+
+
+#urlbar-container {
+    min-width: 250px !important;
+    background: inherit !important;
+}
+
+#urlbar-wrapper {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+}
+
+#urlbar {
+    margin: 0 !important;
+    padding: 0 0 0 0 !important;
+    border: none !important;
+    text-align: center;
+    background: transparent !important;
+    font-family: sans-serif !important;
+    font-size: 12px !important;
+}
+    
+#nav-bar:not(:focus-within) {
+    transition: margin-top 0.05s;
+    margin-top: -21px !important;
+    opacity: 0 !important;
+}
+/*
+ *  Toolbars
+ */
+
+.toolbar-primary,
+#TabsToolbar,
+.browserContainer > findbar {
+    height: 18px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: #1F2235 !important;
+    -moz-appearance: none !important;
+    transition: none !important;
+}
+
+#tabs-closebutton, #ctraddon_tabs-closebutton, #alltabs-button, 
+#private-browsing-indicator {
+    display: none !important;
+}
+}
