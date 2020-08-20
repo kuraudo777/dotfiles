@@ -7,3 +7,5 @@ cp mpd.conf ~/.mpd/mpd.conf
 #cp compton.conf ~/.compton/compton.conf
 #cp userChrome.css ~/Desktop/chrome/
 cp urls ~/.newsboat/urls
+cp newsboatconf ~/.newsboat/config
+cp newsboatconf ~/.newsboat/config
