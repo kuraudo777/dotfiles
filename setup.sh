@@ -4,7 +4,7 @@
 sudo apt update
 
 #sudo apt install xorg
-sudo apt install i3-wm i3status feh rxvt-unicode mpv mpd mpc ncmpcpp vim redshift scrot git  gimp
+sudo apt install i3-wm i3status feh rxvt-unicode mpv mpd mpc ncmpcpp vim redshift scrot git  gimp newsboat
 
 mkdir ~/.mpd
 mkdir -p ~/.mpd/playlists/

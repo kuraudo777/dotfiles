@@ -1,3 +1,8 @@
 browser linkhandler
+
+auto-reload yes
+
+feed-sort-order lastupdated
+
 macro , open-in-browser
 macro v set browser "i3 exec mpv" ; open-in-browser ; set browser linkhandler

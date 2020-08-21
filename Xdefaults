@@ -21,7 +21,7 @@ Xresources
 *color14:   #79cdcd
 *color15:   #e8e9ca
 
-URxvt*font :xft:Sans:pixelsize=11
-URxvt*boldFont :xft:Sans:pixelsize=11
+URxvt*font :xft:Sans:pixelsize=13
+URxvt*boldFont :xft:Sans:pixelsize=13
 URxvt*letterSpace: -1
 URxvt.scrollBar:false
