@@ -1,10 +1,3 @@
-Xresources
-
-URxvt*font :xft:Inconsolata:pixelsize=13
-URxvt*boldFont :xft:Inconsolata:pixelsize=13
-URxvt*letterSpace: 2 
-URxvt.scrollBar:false
-
 ! special
 *.foreground:   #433b32
 *.background:   #dbd6d1
