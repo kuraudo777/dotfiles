@@ -1,7 +1,7 @@
 #! /bin/bash
 cp i3config ~/.config/i3/config
 cp i3status.conf ~/.i3status.conf
-cp neoconfig ~/.config/neofetch/config
+cp neoconfig ~/.config/neofetch/config.conf
 cp Xdefaults ~/.Xdefaults
 cp Xdefaults ~/.Xresources
 cp mpd.conf ~/.mpd/mpd.conf
